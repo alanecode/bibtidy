@@ -37,7 +37,7 @@ def get_unique_cited_keys(tex_file_name):
     citation_keys = flatten(citation_keys)
     citation_keys = [x.split(',') for x in citation_keys]
     citation_keys = flatten(citation_keys)
-    citation_keys = list(set([x for x in citation_keys if x<>'']))
+    citation_keys = list(set([x.strip() for x in citation_keys if x<>'']))
     return citation_keys
             
             
